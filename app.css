@@ -1,0 +1,262 @@
+html, body { height: 100% }
+*{
+    overflow-anchor: none;
+}
+body {
+    background-color: #EEEEEE;
+    background-size: cover;
+    position: relative;
+
+  }
+.background {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+#navlinks{
+    font-size:1.5em;
+    font-weight:400;
+}
+
+#sadiqur{
+    font-size: 1.75em;
+}
+
+
+#mainNav {
+    opacity: 80%;
+}
+ #skill_titles {
+     font-size: small
+ }
+
+ #aboutline {
+    border-bottom: 4px solid #3282B8;
+    display: inline-block;
+    padding-bottom: 10px ;
+    color: #252A34;
+
+}
+#skillSet {
+    font-size: 1.1rem;
+}
+
+#skills p {
+    font-size: 0.8rem;
+}
+
+#about h3 {
+    font-size: x-large;
+}
+
+
+
+/* Typing animation */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+ #typing_p {
+     font-size: 3rem;
+     font-weight: bold;
+     letter-spacing: .1rem;
+     text-align: center;
+     overflow: hidden;
+     padding: 0.5rem;
+ }
+
+ .typed-text { /* color of typing text animation */
+     font-weight: normal;
+     color: #3282B8;
+ }
+
+ .cursor {
+     display: inline-block;
+     width: 2.5px;
+     background-color: #ccc;
+     margin-left: 0.1rem;
+     animation: blink 1s infinite;
+ }
+ .cursor.typing {
+     animation: none;
+ }
+
+ @keyframes blink {
+     0% {background-color: #ccc;}
+     49% {background-color: #ccc;}
+     50% {background-color: transparent;}
+     99% {background-color: transparent;}
+     100% {background-color: #ccc;}
+ }
+
+/* Design for Skills Progress bar*/
+#progress-bar-area {
+    background:#22283194;
+    padding: 1.5em;
+    border-radius: 15px;
+    box-shadow: 0px 0px 60px 0px #22283194;
+}
+
+.progress {
+    background: #212121;
+    height:10px;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.progress-bar {
+    position: relative;
+    background: #1597E5;
+    animation:  animate 5s ease 0s 1 normal;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+@keyframes animate {
+    0% {
+        width: 0%;
+    }
+}
+
+h3.progress-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    
+}
+
+/* Contact Me Button*/
+#pulse {
+    background: #3282B8;
+    /*border: 2px solid;*/
+    border: hidden;
+    font: inherit;
+    line-height: 1;
+    padding: 0.75em 1em;
+    border-radius: 0.5em;
+    text-decoration: none;
+}
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+.pulse {
+    --color: #fff;
+    --hover: #A6E3E9;
+}
+
+#pulse {
+    color: var(--color);
+    transition: 0.25s;
+  }
+#pulse:hover, #pulse:focus {
+    border-color: var(--hover);
+    color: #1E2022;
+}
+
+/* Project View Button by Katherine Kato */
+@import url('https://fonts.googleapis.com/css?family=Mukta:700');
+
+#learn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  #learn.learn-more {
+    width: 12rem;
+    height: auto;
+  }
+  #learn.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+  }
+  #learn.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+  #learn.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+  #learn.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+  #learn.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  #learn:hover .circle {
+    width: 100%;
+  }
+  #learn:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
+  #learn:hover .button-text {
+    color: #fff;
+  }
+
+
+
+
+

@@ -50,7 +50,7 @@ window.onload = function() {
 
   var particles = Particles.init({
 	selector: '.background',
-  color: ['#00ADB5', '#71C9CE'],
+  color: ['#6E3CBC', '#7267CB'],
   connectParticles: true,
   responsive: [{
   	breakpoint: 800,
@@ -83,14 +83,51 @@ particles.init({
         },  {
             breakpoint: 425,
             options: {
-                maxParticles: 0
+                maxParticles: 15,
+                connectParticles: true
             }
         }
 ]
 });
 
 
+const records_wrap = document.querySelector(".records");
+const records_numbers =document.querySelectorAll(".number")
 
 
+window.addEventListener("scroll", ()=>{
+    countUp();
+});
+
+function checkScroll(el) {
+    let rect = el.getBoundingClientRect();
+    if(window.innerHeight >= rect.top + el.offsetHeight) return true;
+    return false;
+}
 
 
+function countUp() {
+    if (!checkScroll(records_wrap)) return;
+    records_numbers.forEach((numb) => {
+        const updateCount = () => {
+            let currentNum = +numb.innerText;
+            let maxNum = +numb.dataset.num;
+            let speed = 5000;
+            const increment = Math.ceil(maxNum / speed);
+            
+
+            if(currentNum < maxNum){
+                numb.innerText = currentNum +increment;
+                setTimeout(updateCount, 1);
+            }
+            else{
+                numb.innerText = maxNum;
+            }
+        };
+
+        setTimeout(updateCount,200);
+
+    });
+
+    
+}

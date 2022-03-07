@@ -333,19 +333,14 @@ h3.progress-title {
 /* records styling */
 .records {
   position: relative;
-
-  
-  
 }
+
 .records .container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  
-
 }
 
 .record-circle {
